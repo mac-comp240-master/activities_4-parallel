@@ -1,36 +1,80 @@
-### Getting started
-There are various things you can do to quickly and efficiently configure your Codio Box to your exact requirements. 
+# OpenMP
 
-### GUI Applications and the Virtual Desktop 
-The Virtual Desktop allows you auto develop GUI based applications using any programming language. You can install a Virtual Desktop in your Box. You can then start the desktop and view it within the Codio IDE or in a new browser tab.
+OpenMP is built into many compilers, including gcc. It has both library
+functions and very special compiler directives called **pragmas**. These are
+single lines added to C code to tell the compiler that a block of code should be
+transformed into code that executes concurrently, or in parallel.
 
-[Virtual Desktop documentation](https://codio.com/docs/ide/boxes/installsw/gui/)
+## Simple examples as patterns
+
+All programs we write as experienced software developers have certain kinds of
+**patterns** that we follow and adapt over and over again. These patterns are
+ways of accomplishing a task that experienced programmers know to be effective.
+
+We have written some small examples of several of these patterns for parallel
+programming using openMP. Because they are small and designed to demononstrate
+one or two basic concepts, we call them *patternlets*.
+
+## Follow along
+
+I have written some notes about these patternlets, in particular for openMP, on
+[this separate site that describes the patterns and the code examples (this is a
+link in case it does not show up on your browser very well- click
+it!)](http://selkie-macalester.org/csinparallel/modules/Patternlets/build/html/SharedMemory/OpenMP_Patternlets.html).
+Follow the descriptions on this page in a separate window of your browser.
+
+If you feel like you need more screen space, the guide that you are reading can
+be closed once you understand the instructions below. You may, however, want to
+keep it up if you are uncomfortable with the unix command cd for changing
+directories, which you will need to use at the terminal many times.
+
+## The Code has instructions in it
+
+There are many examples in separate directories inside the directory called
+openMP.
+
+The first of these examples is opened for viewing in the lower left area. You
+can place each new one that you try in there by finding it in the directory tree
+on the left. For example, the first one can be found by opening openMP, then
+opening 00.forkJoin, and finding the .c file inside. This of course is already
+done for you for the first one. 
+
+The first of these examples accessed on the terminal by using `cd` to get to the
+directory containing it. Each example is in its own directory.
+
+    cd openMP/00.forkJoin/
+
+Then build and run:
+    
+    make
+    
+    ./forkJoin
+
+The top of the code file has instructions to try to change the code and build
+and run again. After you do that, answer the following question.
+
+{Check It!|assessment}(multiple-choice-930435807)
 
 
-### Command line access and the Terminal window
-All Codio Boxes provide sudo level privileges to the underlying Ubuntu server. This means you can install and configure any component you like. You access the terminal from the **Tools->Terminal** menu item.
+Each of the examples is in different subdirectories, which you can cd into.
+Getting to the next one is done like this:
 
-### Debugger
-The Codio IDE comes with a powerful visual debugger. Currently we support Python, Java, C, C++ and NodeJS. Other languages can be added on request.
+    cd ../01.forkJoin2/
+    
+Open the .c code in the lower left panel and look at the directions written as
+comments in the file.
 
-[Debugger documentation](https://codio.com/docs/ide/features/debugging/)
+# Open the following in your browser
 
+**Please do this, it is very important, because it gives you extra information.**
+    
+Follow along in a separate browser window on [this separate site that describes
+the patterns and the code examples (this is a link in case it does not show up
+on your browser very
+well)](http://selkie-macalester.org/csinparallel/modules/Patternlets/build/html/SharedMemory/OpenMP_Patternlets.html).
 
-### Content authoring and assessments
-Codio comes with a very powerful content authoring tool, Codio Guides. Guides is also where you create all forms of auto-graded assessments. 
-
-- [Guides documentation](https://codio.com/docs/content/authoring/overview/)
-- [Assessments documentation](https://codio.com/docs/content/authoring/assessments/)
-
-### Templating Box configurations and projects
-Codio offers two very powerful templating options so you can create new projects from those templates with just a couple of clicks. **Stacks** allow you to create snapshots of the Box’s underlying software configuration. You can then create new projects from a Stack avoiding having to configure anew each time you start a new project. **Starter Packs** allow you to template an entire project, including workspace code.
-
-- [Stacks documentation](https://codio.com/docs/project/stacks/)
-- [Starter Packs documentation](https://codio.com/docs/project/packs/)
-
-### Install software
-You can always install software onto your Box using the command line. However, Codio offers a shortcut for commonly installed components that can be accessed from the **Tools->Install Software** menu.
-
-We can easily add new items to the Install Software screen, so feel free to submit requests.
-
-[Install Software documentation](https://codio.com/docs/ide/boxes/installsw/box-parts/)
+Scroll down and begin with the first set of OpenMP examples, **Shared Memory
+Program Structure and Coordination Patterns**, by clicking on the link. It will
+start with an explanation of the fork-join example that you just tried. Note
+that this site has links labeled Previous and Next. Keep going through each of
+the 'Next' pages to find more examples.
