@@ -18,7 +18,7 @@ explanation](http://selkie-macalester.org/csinparallel/modules/MonteCarloSimulat
 The first couple of pages review how random number generation can be done in C
 code for Monte Carlo simulations.
 
-Work on the coin flipping example by going to this [Particular page showing a
+Work on the coin flipping example by going to this [page showing a
 sequential version of coin
 flipping](http://selkie-macalester.org/csinparallel/modules/MonteCarloSimulationExemplar/build/html/Introduction/CoinFlip.html).
 
@@ -26,7 +26,7 @@ Compile it like this:
 
     g++ -o coinFlip_seq coinFlip_seq.cpp
 
-Then continue to this [Particular page showing coin flipping in parallel using
+Then continue to this [page showing coin flipping in parallel using
 one seed for the random
 numbers](http://selkie-macalester.org/csinparallel/modules/MonteCarloSimulationExemplar/build/html/Threads/OpenMP_CoinFlip.html)
 
@@ -34,7 +34,7 @@ Compile it like this:
 
     g++ -o coinFlip_omp coinFlip_omp.cpp -fopenmp
 
-Most importantly, go to and read this [Important page showing how to use
+Most importantly, go to and read this [page showing how to use
 separate seeds for each
 thread](http://selkie-macalester.org/csinparallel/modules/MonteCarloSimulationExemplar/build/html/SeedingThreads/SeedEachThread.html)
 
@@ -53,5 +53,5 @@ Run the properly seeded parallel one, which defaults to 4 threads:
 
     ./coinFlip_omp_seeds
     
-You should see the times for each test case be approximately  4 times as fast
+You should see the times for each test case be approximately four times as fast
 for the parallel version as compared to the sequential version.
