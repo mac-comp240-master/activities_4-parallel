@@ -1,6 +1,9 @@
 # Monte Carlo Computations
 
-Use your ssh client to connect to wulver.macalester.edu.
+In this activity, you will examine code that implements Monte Carlo simulation
+both sequentially and in parallel. This is relevant to your solution for HW 6.
+
+Use your ssh client to connect to wulver.macalester.edu for this activity.
 
 ## Try the examples
 
