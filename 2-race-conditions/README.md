@@ -20,7 +20,7 @@ The code provided here integrates by computing the area under the curve of the
 integral of a function, f(x), using the trapezoidal rule. In particular, this
 code will use the trapezoid areas at points along the curve, like this:
 
-![trapezoidal approximation](.img/trapezoidal-rule-multiple-bins.png)
+![trapezoidal approximation](img/trapezoidal-rule-multiple-bins.png)
 
 This image was taken from [this
 explanation](https://chemicalstatistician.wordpress.com/2013/12/14/conceptual-foundations-and-illustrative-examples-of-trapezoidal-integration-in-r/),
