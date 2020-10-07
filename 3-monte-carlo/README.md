@@ -3,15 +3,11 @@
 In this activity, you will examine code that implements Monte Carlo simulation
 both sequentially and in parallel. This is relevant to your solution for HW 6.
 
-Use your ssh client to connect to wulver.macalester.edu for this activity.
 
 ## Try the examples
 
 There are three C++ code files in this directory, which you will compile
-separately on the command line so that you can see how we add a compile flag for
-the openmp library and pragmas. Note that though these are C++ code files and
-require a different compiler (g++ vs. gcc), you can edit them as if they were C
-code.
+separately on the command line so that you can see how we add a compile flag for the openmp library and pragmas. Note that though these are C++ code files and require a different compiler (g++ vs. gcc), you can edit them as if they were C code.
 
 You should look at the following pages for explanation:
 
@@ -30,16 +26,14 @@ Compile it like this:
     g++ -o coinFlip_seq coinFlip_seq.cpp
 
 Then continue to this [page showing coin flipping in parallel using
-one seed for the random
-numbers](http://selkie-macalester.org/csinparallel/modules/MonteCarloSimulationExemplar/build/html/Threads/OpenMP_CoinFlip.html)
+one seed for the random numbers](http://selkie-macalester.org/csinparallel/modules/MonteCarloSimulationExemplar/build/html/Threads/OpenMP_CoinFlip.html)
 
 Compile it like this:
 
     g++ -o coinFlip_omp coinFlip_omp.cpp -fopenmp
 
 Most importantly, go to and read this [page showing how to use
-separate seeds for each
-thread](http://selkie-macalester.org/csinparallel/modules/MonteCarloSimulationExemplar/build/html/SeedingThreads/SeedEachThread.html)
+separate seeds for each thread](http://selkie-macalester.org/csinparallel/modules/MonteCarloSimulationExemplar/build/html/SeedingThreads/SeedEachThread.html)
 
 Compile this finally correctly seeded version like this:
 
@@ -56,5 +50,4 @@ Run the properly seeded parallel one, which defaults to 4 threads:
 
     ./coinFlip_omp_seeds
     
-You should see the times for each test case be approximately four times as fast
-for the parallel version as compared to the sequential version.
+You should see the times for each test case be approximately four times as fast for the parallel version as compared to the sequential version.

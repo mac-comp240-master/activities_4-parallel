@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
 
   double h = (b - a) / n; /* width of subdivision */
   // TODO for Goal 2: comment this out
-  printf("h = %15.14lf\n",h);
+  // printf("h = %15.14lf\n",h);
 
   integral = (f(a) + f(b))/2.0;  // initialize accumulator variable
   int i;
@@ -50,14 +50,12 @@ int main(int argc, char** argv) {
   double elapsed_time = end - start;
 
   //output
-  //  TODO: for Goal 2, comment the following  2 printf lines
-  printf("With %ld trapezoids, our esimate of the integral from %lf to %lf is %lf\n", n, a, b, integral);
-  printf("Sequential time: %lf seconds\n", elapsed_time);
+  // printf("With %ld trapezoids, our esimate of the integral from %lf to %lf is %lf\n", n, a, b, integral);
+  // printf("Sequential time: %lf seconds\n", elapsed_time);
 
   //output for sending to a spreadsheet using bash scripts: just the time
   // followed by a tab
-  //  TODO: for Goal 2, uncomment the following printf line
-  // printf("%lf\t",elapsed_time);
+  printf("%lf\t",elapsed_time);
 }
 
 /*

@@ -34,12 +34,11 @@ int main(int argc, char** argv) {
   }
 
 
-//  TODO: for Goal 2, comment the following  2 printf lines
 #ifdef _OPENMP
-  printf("OMP defined, threadct = %d\n", threadct);
+  // printf("OMP defined, threadct = %d\n", threadct);
   omp_set_num_threads(threadct);
 #else
-  printf("OMP not defined\n");
+  // printf("OMP not defined\n");
 #endif
 
   integral = (f(a) + f(b))/2.0;
@@ -53,7 +52,7 @@ int main(int argc, char** argv) {
 // TODO: add the proper additions to the openmp pragma here for correct output
 ////////////////
 #pragma omp parallel for default(none) \
-shared() private () reduction()
+shared(a, h, n) private (i) reduction(+:integral)
   for(i = 1; i < n; i++) {
     integral += f(a+i*h);
   }
@@ -66,14 +65,12 @@ shared() private () reduction()
   double elapsed_time = end - start;
 
   //output
-  //  TODO: for Goal 2, comment the following  2 printf lines
-  printf("With %ld trapezoids, our esimate of the integral from %lf to %lf is %lf\n", n, a, b, integral);
-  printf("Parallel time: %lf seconds\n", elapsed_time);
+  // printf("With %ld trapezoids, our esimate of the integral from %lf to %lf is %lf\n", n, a, b, integral);
+  // printf("Parallel time: %lf seconds\n", elapsed_time);
 
   //output for sending to a spreadsheet using bash scripts: just the time
   // followed by a tab
-  //  TODO: for Goal 2, uncomment the following printf line
-  // printf("%lf\t",elapsed_time);
+  printf("%lf\t",elapsed_time);
 }
 
 /*
