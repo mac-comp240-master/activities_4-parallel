@@ -2,12 +2,6 @@
 
 In this activity, you will practice using reduction to avoid race condtions.
 
-This is also the first activity where you will use a remote server. You will need to use ssh (secure shell) to login to the remote machine called wulver.macalester.edu. Use the user name and password that you were given.
-
-**NOTE:** At the terminal on wulver asking for your password, when you type your password, it will appears as if you are typing nothing at all. This is a security measure in the linux terminal (so people do not even know how long your password is).
-
-You will need to `git clone` once logged in to wulver in order to access the starter code on that machine.
-
 ### Trapezoidal Approximation
 
 The code provided here integrates by computing the area under the curve of the integral of a function, f(x), using the trapezoidal rule. In particular, this code will use the trapezoid areas at points along the curve, like this:

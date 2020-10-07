@@ -17,7 +17,7 @@ demononstrate one or two basic concepts, we call them *patternlets*.
 
 # Patternlet Activities
 
-For this activity, you will access patternlets on [this
+For this activity, you will access instructions on [this
 website](http://selkie-macalester.org/csinparallel/modules/Patternlets/build/html/SharedMemory/OpenMP_Patternlets.html).
 
 Scroll down and begin with the first set of OpenMP examples, **Shared Memory
@@ -47,5 +47,4 @@ and run again. After you do that, answer the following question.
 
 # Complete the activities assigned in class
 
-You will work on patternlets in class. The patternlets you are required to
-complete are listed on Moodle.
+You will work on patternlets in class. 
