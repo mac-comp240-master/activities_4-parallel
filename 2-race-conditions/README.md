@@ -1,4 +1,4 @@
-# Race Conditions
+# Race Conditions and Running Experiments
 
 In this activity, you will practice using reduction to avoid race condtions.
 
