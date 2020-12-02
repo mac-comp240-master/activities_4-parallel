@@ -1,5 +1,7 @@
 # Monte Carlo Computations
 
+# NOTE: ignore this folder (code needs repair)
+
 In this activity, you will examine code that implements Monte Carlo simulation
 both sequentially and in parallel. This is relevant to your solution for HW 6.
 

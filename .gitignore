@@ -8,6 +8,7 @@ sftp.json
 # executables
 trap-seq 
 trap-omp
+random_demo
 coinFlip_omp_seeds
 coinFlip_omp
 coinFlip_seq
