@@ -10,6 +10,7 @@
 #include <stdio.h>        // printf()
 #include <stdlib.h>       // srand() and rand()
 #include <time.h>        // time()
+#include <random>
 
 //const int MAX = 1<<30; //1 gig
 
@@ -61,13 +62,27 @@ int main() {
         startTime = clock();		//get start time for this trial
         
     /***** Flip a coin trialFlips times ****/
+        std::random_device rd;
+
+        std::default_random_engine e1(rd());
+        std::uniform_int_distribution<int> uniform_dist(1, 2);
+
         for (numFlips=0; numFlips<trialFlips; numFlips++) {
             // if random number is even, call it heads
             // if (rand()%2 == 0)     // on Windows, use this
-            if (rand_r(&seed)%2 == 0) // on linux, can use this
-                numHeads++;
+            // if (rand_r(&seed)%2 == 0) // on linux, can use this
+            //     numHeads++;
+            // else
+            //     numTails++;
+            // could do this above, using modulo, but ... be faster
+            // if (rand_r(&seed) & 1) // if random number is odd, call it tails
+            // if (rd() & 1) 
+            int val = uniform_dist(e1);
+            if (val == 2)
+                numTails++;       
             else
-                numTails++;
+                numHeads++;
+            
         }
         
         stopTime = clock();   // stop the clock

@@ -128,26 +128,34 @@ int main(int argc, char *argv[]) {
         reduction(+:numHeads, numTails)
     {
         tid = omp_get_thread_num();   // my thread id
-        seed = seeds[tid];            // it is much faster to keep a 
+        // seed = seeds[tid];            // it is much faster to keep a 
                                       // private copy of our seed
-		//srand(seed);	              //seed rand_r or rand
+		
+        std::random_device rd;
+
         // since declared here, these are automatically private
-        std::mt19937_64 generator;  //declaration of a generator for each thread
+        // std::mt19937_64 generator;  //declaration of a generator for each thread
         unsigned int uintNumber;    // random nuber from distribution
-        std::uniform_int_distribution<unsigned int> intDistribution;
+        // std::uniform_int_distribution<unsigned int> intDistribution;
 
         // each thread has a private generator
         
-        generator.seed(seed);   // use the seed as a start to the generator
+        // generator.seed(seed);   // use the seed as a start to the generator
         
-
+        unsigned int one = 1U;
         #pragma omp for
         for (numFlips=0; numFlips<trialFlips; numFlips++) {
-            uintNumber = intDistribution(generator);
-            if (uintNumber%2 == 0) // if random number is even, call it heads
-                numHeads++;       
+            // uintNumber = intDistribution(generator);
+            uintNumber = rd();
+            // could do this, but ... be faster
+            // if (uintNumber%2 == 0) // if random number is even, call it heads
+            //     numHeads++;       
+            // else
+            //     numTails++;
+            if (uintNumber & one) // if random number is odd, call it tails
+                numTails++;       
             else
-                numTails++;
+                numHeads++;
         }
         
     }

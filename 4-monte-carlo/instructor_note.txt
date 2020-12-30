@@ -1,0 +1,9 @@
+Libby Shoop
+
+Dec. 3, 2020
+
+I chose to try to modernize the random number generation by adding the example in 3-random-numbers. It does follow on perfectly fine for the monte carlo computing Pi homework problem.
+
+However, when I went back to try to create versions of this coin-flipping example, I am finding that the 'modern' C++ generators are less random and slower. I need to do more experimentation to sort this out.
+
+For COMP 240 in Fall 2020 I simply eliminated this folder with this example.
