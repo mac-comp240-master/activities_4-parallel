@@ -20,6 +20,8 @@ demononstrate one or two basic concepts, we call them *patternlets*.
 For this activity, you will access instructions on [this
 website](http://selkie-macalester.org/csinparallel/modules/Patternlets/build/html/SharedMemory/OpenMP_Patternlets.html).
 
+You should complete patternlets 00-08 and 11.
+
 Scroll down and begin with the first set of OpenMP examples, **Shared Memory
 Program Structure and Coordination Patterns**. It will start with an explanation
 of the fork-join example that you will try soon. Note that this site has links
